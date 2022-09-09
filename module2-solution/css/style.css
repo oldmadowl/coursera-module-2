@@ -1,0 +1,102 @@
+/* ============ START MAIN STYLES ============ */
+html,
+body {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.menu__title {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 175%;
+}
+
+.menu__inner {
+  margin-left: -25px;
+}
+
+.menu__item {
+  position: relative;
+  float: left;
+  margin-left: 25px;
+  width: calc(33.333% - 25px);
+  background-color: #999;
+  border: 1px solid black;
+  padding: 45px 15px 10px;
+}
+
+.menu__item-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid black;
+  font-weight: 700;
+  font-size: 125%;
+  padding: 3px 10px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.menu__item:nth-child(1) .menu__item-title {
+ background-color: #d59898;
+}
+
+.menu__item:nth-child(2) .menu__item-title {
+ background-color: #c14543;
+ color: white;
+}
+
+.menu__item:nth-child(3) .menu__item-title {
+ background-color: #e5d198;
+}
+
+.menu__item-text {
+  font-size: 100%;
+}
+/* ============ END MAIN STYLES ============ */
+
+/* ========== START MEDIA QUERIES ============ */
+/* tablet view */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu__item {
+    width: calc(50% - 25px);
+    margin-bottom: 25px;
+  }
+
+  .menu__item:nth-child(3) {
+    width: calc(100% - 25px);
+  }
+}
+
+/* mobile view */
+@media (max-width: 767px) {
+  .menu__inner {
+    margin-left: 0;
+  }
+
+  .menu__item {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-left: 0;
+  }
+}
+/* ========== END MEDIA QUERIES ============ */
